@@ -41,9 +41,13 @@ lzma_files := \
   XzEnc.c \
   XzIn.c
 
+lzma_cflags := -D_7ZIP_ST -Wno-empty-body
+lzma_clang_cflags := -Wno-self-assign
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := liblzma
-LOCAL_CFLAGS := -D_7ZIP_ST
+LOCAL_CFLAGS := $(lzma_cflags)
+LOCAL_CLANG_CFLAGS := $(lzma_clang_cflags)
 LOCAL_SRC_FILES := $(lzma_files)
 LOCAL_MULTILIB := both
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
@@ -51,14 +55,16 @@ include $(BUILD_HOST_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := liblzma
-LOCAL_CFLAGS := -D_7ZIP_ST
+LOCAL_CFLAGS := $(lzma_cflags)
+LOCAL_CLANG_CFLAGS := $(lzma_clang_cflags)
 LOCAL_SRC_FILES := $(lzma_files)
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := liblzma
-LOCAL_CFLAGS := -D_7ZIP_ST
+LOCAL_CFLAGS := $(lzma_cflags)
+LOCAL_CLANG_CFLAGS := $(lzma_clang_cflags)
 LOCAL_SRC_FILES := $(lzma_files)
 LOCAL_MULTILIB := both
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
@@ -66,7 +72,8 @@ include $(BUILD_HOST_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := liblzma
-LOCAL_CFLAGS := -D_7ZIP_ST
+LOCAL_CFLAGS := $(lzma_cflags)
+LOCAL_CLANG_CFLAGS := $(lzma_clang_cflags)
 LOCAL_SRC_FILES := $(lzma_files)
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
 include $(BUILD_SHARED_LIBRARY)
