@@ -41,7 +41,7 @@ lzma_files := \
   XzEnc.c \
   XzIn.c
 
-lzma_cflags := -D_7ZIP_ST -Wno-empty-body
+lzma_cflags := -D_7ZIP_ST -Wno-empty-body -Wno-sign-compare
 lzma_clang_cflags := -Wno-self-assign
 
 include $(CLEAR_VARS)
