@@ -46,6 +46,7 @@ lzma_clang_cflags := -Wno-self-assign
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := liblzma
+LOCAL_MODULE_HOST_OS := linux darwin windows
 LOCAL_CFLAGS := $(lzma_cflags)
 LOCAL_CLANG_CFLAGS := $(lzma_clang_cflags)
 LOCAL_SRC_FILES := $(lzma_files)
@@ -63,6 +64,7 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := liblzma
+LOCAL_MODULE_HOST_OS := linux darwin windows
 LOCAL_CFLAGS := $(lzma_cflags)
 LOCAL_CLANG_CFLAGS := $(lzma_clang_cflags)
 LOCAL_SRC_FILES := $(lzma_files)
