@@ -3,6 +3,8 @@
 cc_library {
     name: "liblzma",
     host_supported: true,
+    sdk_version: "9",
+    stl: "none",
 
     cflags: ["-D_7ZIP_ST", "-Wno-empty-body"],
     clang_cflags: ["-Wno-self-assign"],
