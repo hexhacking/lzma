@@ -58,6 +58,13 @@ cc_library {
         },
         windows: {
             enabled: true,
+            srcs: [
+                "Bcj2Enc.c",
+                "DllSecur.c",
+                "LzFindMt.c",
+                "MtCoder.c",
+                "Threads.c",
+            ],
         },
     },
 }
