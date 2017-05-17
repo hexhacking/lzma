@@ -1,1 +1,4 @@
-subdirs = ["C"]
+subdirs = [
+    "C",
+    "xz-embedded",
+]
