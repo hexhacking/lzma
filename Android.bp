@@ -1,4 +1,3 @@
 subdirs = [
     "C",
-    "xz-embedded",
 ]
