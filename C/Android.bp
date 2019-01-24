@@ -18,8 +18,9 @@ cc_library {
         "-Werror",
         "-Wno-empty-body",
         "-Wno-enum-conversion",
+        "-Wno-logical-op-parentheses",
+        "-Wno-self-assign",
     ],
-    clang_cflags: ["-Wno-self-assign", "-Werror"],
 
     export_include_dirs: ["."],
 
